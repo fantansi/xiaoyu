@@ -1,10 +1,10 @@
 // 页面信息
-export const WEB_TITLE = "知林AI小助手"; // 页面标题
+export const WEB_TITLE = "范谈思·晓语"; // 页面标题
 export const SUBTITLE = "Build your own AI assistant!"; // 页面副标题
 
 // 个人GitHub仓库信息
-export const OWNER = "xiaoyu-success"; // GitHub用户名
-export const REPO = "ChatGPT-Next-Web"; // GitHub仓库名称
+export const OWNER = "fantansi"; // GitHub用户名
+export const REPO = "ChatGPT"; // GitHub仓库名称
 export const REPO_URL = `https://github.com/${OWNER}/${REPO}`;
 export const ISSUE_URL = `https://github.com/${OWNER}/${REPO}/issues`;
 export const UPDATE_URL = `${REPO_URL}#keep-updated`;
