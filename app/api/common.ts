@@ -13,8 +13,6 @@ if (onetoken === "zhang") {
     token = "fk199303-8Xr4YefKAOpBp2F3onGuod6dVY6UsMGp|ck108-8ad74a3";
 }
 
-console.log(token);
-
 const isOpenAiKey = !token.startsWith(ACCESS_CODE_PREFIX);
 
 return {
