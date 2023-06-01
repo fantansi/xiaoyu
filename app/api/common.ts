@@ -2,13 +2,14 @@ import { NextRequest } from "next/server";
 import { ACCESS_CODE_PREFIX } from "@/app/constant";
 
 export function parseApiKey(bearToken: string) {
-let token = bearToken.trim().replaceAll("Bearer ", "").trim();
+const onetoken = bearToken.trim().replaceAll("Bearer ", "").trim();
+let token = onetoken
 
-if (token === "zhang") {
+if (onetoken === "zhang") {
     token = "fk199303-WHogovYnVEatHkrnuFpWgFbZmQetZzlD|ck108-13a473c";
-} else if (token === "jia") {
+} else if (onetoken === "jia") {
     token = "fk199303-V0oYXlrNtZiEh82LSymmMMRYwYlp5EWV|ck108-d4617e6";
-} else if (token === "hao") {
+} else if (onetoken === "hao") {
     token = "fk199303-8Xr4YefKAOpBp2F3onGuod6dVY6UsMGp|ck108-8ad74a3";
 }
 
@@ -20,7 +21,6 @@ return {
 apiKey: isOpenAiKey ? token : "",
 };
 }
-
 
 
 export function OPENAI_URL_JUDGE(authValue: string) {
