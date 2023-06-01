@@ -2,8 +2,8 @@ import { NextRequest } from "next/server";
 import { ACCESS_CODE_PREFIX } from "@/app/constant";
 
 export function parseApiKey(bearToken: string) {
+  const ACCESS_CODE_PREFIX = "sk_";
   let token = bearToken.trim().replaceAll("Bearer ", "").trim();
-  
   if (token === "jia") {
     token = "fk199303-WHogovYnVEatHkrnuFpWgFbZmQetZzlD|ck108-13a473c";
   } else if (token === "hao") {
@@ -13,14 +13,11 @@ export function parseApiKey(bearToken: string) {
   } else {
     // train the model
   }
-
   const isOpenAiKey = !token.startsWith(ACCESS_CODE_PREFIX);
-
-  return {
-    apiKey: isOpenAiKey ? token : "",
-    token
-  };
+  const apiKey = isOpenAiKey ? token : "";
+  return { token, apiKey };
 }
+
 
 
 export function OPENAI_URL_JUDGE(authValue: string) {
