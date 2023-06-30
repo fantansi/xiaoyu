@@ -1,5 +1,5 @@
 // 页面信息
-export const WEB_TITLE = "范谈思·晓语"; // 页面标题
+export const WEB_TITLE = "晓语工作站"; // 页面标题
 export const SUBTITLE = "Build your own AI assistant!"; // 页面副标题
 
 // 个人GitHub仓库信息
